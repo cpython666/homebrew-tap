@@ -8,6 +8,10 @@ cask "starclip" do
   desc "Local-first clipboard history and code snippet manager"
   homepage "https://github.com/cpython666/starclip"
 
+  livecheck do
+    skip "Development previews are updated manually"
+  end
+
   depends_on arch: :arm64
   depends_on :macos
 
