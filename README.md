@@ -1,6 +1,6 @@
-# 星笺 Starclip · Homebrew Tap
+# 星空系列 · Homebrew Tap
 
-星笺维护的 Homebrew 安装源，提供本地剪贴历史与代码收藏桌面应用。软件源码：[cpython666/starclip](https://github.com/cpython666/starclip)。
+星空系列应用维护的 Homebrew 安装源。下方保留星笺的独立安装说明，星镜截图工具见「星镜 Starshot」一节。星笺提供本地剪贴历史与代码收藏，软件源码：[cpython666/starclip](https://github.com/cpython666/starclip)。
 
 ## 安装
 
@@ -43,3 +43,25 @@ brew uninstall --cask cpython666/tap/starclip
 4. 提交并推送此仓库，用户执行 `brew update` 后获得新版本定义。
 
 Tap 使用 MIT 许可证。软件本身的许可和功能范围以源代码仓库及对应版本发布说明为准。
+
+## 星镜 Starshot
+
+星镜是独立的本地截图、标注、敏感信息遮盖、置顶贴图和图片美化工具，不提供长期剪贴历史。源码：[cpython666/starshot](https://github.com/cpython666/starshot)。
+
+提供 [v0.3.0 开发预览版](https://github.com/cpython666/starshot/releases/tag/v0.3.0)，支持 **Apple Silicon Mac、macOS 12 Monterey 及以上**：
+
+```sh
+brew install --cask cpython666/tap/starshot
+```
+
+该包为 ad-hoc 签名，尚未 Apple 公证，首次启动可能受系统拦截；Cask 不绕过 quarantine 或系统安全检查。安装前请查看发布说明；已有手动安装的 `Starshot.app` 时，不要用 `--force` 覆盖，尤其不要降级打开较新版恢复点。
+
+星镜支持应用内手动检查更新，因此 Cask 标记 `auto_updates true`。本次是固定 tag 的预览包，不会成为应用内的最新稳定更新；通过 Homebrew 升级时需包含 `--greedy`：
+
+```sh
+brew update
+brew upgrade --cask --greedy cpython666/tap/starshot
+brew uninstall --cask cpython666/tap/starshot
+```
+
+升级前保存或备份当前编辑并退出星镜。Cask 仅管理应用，没有卸载脚本或 `zap`，不主动删除本机恢复点。应用使用 MIT 许可，OCR模型保留自身许可与来源。当前Cask只含macOS包；Windows安装包见星镜Release。
