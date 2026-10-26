@@ -12,9 +12,9 @@ brew install --cask cpython666/tap/starclip
 
 Homebrew 如提示信任此第三方安装源，请先核对仓库为 `cpython666/homebrew-tap` 和 Cask 内容。
 
-当前提供 [v0.1.0-alpha.1 开发预览版](https://github.com/cpython666/starclip/releases/tag/v0.1.0-alpha.1)，应用内版本号为 0.1.0。它是已经公开的早期版本，不包含仍在开发中的 0.2.0 新功能。下载文件固定 SHA-256 校验；这是星笺维护的自有 Tap，不代表 Homebrew 官方主仓收录。
+当前提供 [v0.1.0-alpha.2 开发预览版](https://github.com/cpython666/starclip/releases/tag/v0.1.0-alpha.2)，应用内版本号为 0.1.0。它只修复 alpha.1 的应用打包签名结构，功能保持早期版本，不包含仍在开发中的 0.2.0 新功能。下载文件固定 SHA-256 校验；这是星笺维护的自有 Tap，不代表 Homebrew 官方主仓收录。
 
-该预览包没有 Apple Developer 签名与公证，macOS 可能阻止首次打开；Homebrew 安装不会绕过系统安全检查。请在确认来源后按 macOS 提示处理，或等待后续正式签名版本。
+该预览包的本地 ad-hoc 签名完整性已经验证，但没有 Apple Developer 签名与公证，macOS 可能阻止首次打开；Homebrew 安装不会绕过系统安全检查。请在确认来源后按 macOS 提示处理，或等待后续正式签名版本。
 
 如果 `/Applications/Starclip.app` 已经存在，请不要用 `--force` 覆盖正在使用的版本，尤其不要用预览包降级打开新版数据。已有应用可继续使用，待更高版本发布后再迁移到 Homebrew 管理。
 
