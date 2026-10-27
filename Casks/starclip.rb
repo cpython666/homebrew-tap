@@ -1,6 +1,6 @@
 cask "starclip" do
-  version "0.1.0-alpha.2"
-  sha256 "c48568607037ec804613be8b2307e3041806849327b27aacd71d579062133240"
+  version "0.2.2"
+  sha256 "600784a9fc48ffab2702cdbef66628dc71a34061c7566242ffd9bf075a428cb4"
 
   url "https://github.com/cpython666/starclip/releases/download/v#{version}/Starclip_#{version}_aarch64.dmg"
   name "Starclip"
@@ -9,7 +9,8 @@ cask "starclip" do
   homepage "https://github.com/cpython666/starclip"
 
   livecheck do
-    skip "Development previews are updated manually"
+    url :url
+    strategy :github_latest
   end
 
   depends_on arch: :arm64
@@ -18,8 +19,7 @@ cask "starclip" do
   app "Starclip.app"
 
   caveats <<~EOS
-    This is the 0.1.0-alpha.2 development preview for Apple Silicon Macs.
-    It is not Apple-notarized; macOS may block the first launch.
-    See the release notes before installing: https://github.com/cpython666/starclip/releases/tag/v0.1.0-alpha.2
+    See the release notes for notarization status and installation instructions:
+    https://github.com/cpython666/starclip/releases/tag/v#{version}
   EOS
 end
