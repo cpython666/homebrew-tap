@@ -8,6 +8,11 @@ cask "starshot" do
   desc "Local-first screenshot, annotation and image pinning tool"
   homepage "https://github.com/cpython666/starshot"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
   depends_on arch: :arm64
   depends_on macos: :monterey
